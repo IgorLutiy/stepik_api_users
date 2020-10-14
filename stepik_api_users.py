@@ -5,7 +5,6 @@ def pars_json(id):
         jx = json.loads(requests.get('https://stepik.org/api/users/' + id).text)
         print('\n')
         print('%-24s%-20s' % ('full_name: ', jx['users'][0]['full_name']))
-        print('%-24s%-20s' % ('level: ', jx['users'][0]['level']))
         print('%-24s%-20s' % ('knowledge: ', jx['users'][0]['knowledge']))
         print('%-24s%-20s' % ('knowledge_rank: ', jx['users'][0]['knowledge_rank']))
         print('%-24s%-20s' % ('reputation: ', jx['users'][0]['reputation']))
